@@ -37,7 +37,7 @@ export function HomePage() {
         <div className="hero-text">
           <div className="hero-subtitle">
             <span className="type-body">Set up your Windows 11 PC</span>
-            <span className="hero-badge">Preview</span>
+            <span className="hero-badge">v{__APP_VERSION__}</span>
           </div>
           <h1 className="type-title-large">WindFox Studio</h1>
         </div>

@@ -1,10 +1,17 @@
+import { readFileSync } from "node:fs";
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+
+const { version } = JSON.parse(readFileSync(new URL("./package.json", import.meta.url), "utf8"));
 
 // https://v2.tauri.app/start/frontend/vite/
 export default defineConfig({
   plugins: [react()],
   clearScreen: false,
+  define: {
+    // Shown in Settings > About; package.json is the single source of truth.
+    __APP_VERSION__: JSON.stringify(version),
+  },
   server: {
     port: 1420,
     strictPort: true,

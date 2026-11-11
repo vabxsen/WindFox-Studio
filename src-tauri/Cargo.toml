@@ -1,6 +1,6 @@
 [package]
 name = "windfox-studio"
-version = "0.1.0"
+version = "1.0.0"
 description = "Set up a Windows 11 PC: pick apps, install them in one go, and keep drivers current."
 edition = "2021"
 publish = false

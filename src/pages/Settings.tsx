@@ -76,7 +76,7 @@ export function SettingsPage() {
         <SettingsExpander
           icon={<img src="/app-icon.svg" width={20} height={20} alt="" />}
           header="WindFox Studio"
-          description="Version 0.1.0 (preview)"
+          description={`Version ${__APP_VERSION__}`}
         >
           <ExpanderItem header="Apps are installed with Windows Package Manager (winget) from their official sources.">
             <Link onClick={() => void api.openUrl("https://learn.microsoft.com/windows/package-manager/")}>Learn more</Link>
