@@ -15,7 +15,7 @@ visible in dark mode. Nothing else was changed.
 | Steam | `valve-steam.png` | site icon: <https://store.steampowered.com/favicon.ico> |
 | Epic Games Launcher | `epicgames-epicgameslauncher.png` | Wikimedia Commons: <https://upload.wikimedia.org/wikipedia/commons/3/31/Epic_Games_logo.svg> |
 | GOG GALAXY | `gog-galaxy.png` | apple-touch-icon: <https://store-static-modular.gog-statics.com/en/assets/favicons/apple-touch-icon-180x180.png> |
-| EA app | `electronicarts-eadesktop.png` | site icon: <https://www.ea.com/_next/static/media/favicon.3156aee2.ico> |
+| EA app | `electronicarts-eadesktop.png` | Wikimedia Commons (EA mark, tagline cropped): <https://upload.wikimedia.org/wikipedia/commons/6/64/Electronic_Arts_logo_black.svg> |
 | Ubisoft Connect | `ubisoft-connect.png` | site icon: <https://static-dm.ubisoft.com/ubisoft/prod/favicon-228x228.png> |
 | Battle.net | `blizzard-battlenet.png` | site icon: <https://d2zsxgsqjmrnrw.cloudfront.net/images/favicon-196x196.c3a4cd54fdaeec566e96c37dba35cbca5eccba52.png> |
 | Discord | `discord-discord.png` | apple-touch-icon: <https://cdn.prod.website-files.com/6257adef93867e50d84d30e2/6266bc493fb42d4e27bb8393_847541504914fd33810e70a0ea73177e.ico> |
@@ -35,7 +35,7 @@ visible in dark mode. Nothing else was changed.
 | LibreOffice | `thedocumentfoundation-libreoffice.png` | official asset: <https://raw.githubusercontent.com/LibreOffice/core/master/sysui/desktop/icons/hicolor/scalable/apps/main.svg> |
 | 7-Zip | `7zip-7zip.png` | Wikimedia Commons: <https://upload.wikimedia.org/wikipedia/commons/3/32/7-Zip_Icon.svg> |
 | PowerToys | `microsoft-powertoys.png` | official asset: <https://raw.githubusercontent.com/microsoft/PowerToys/main/doc/images/icons/PowerToys%20icon/PNG/PowerToysAppList.targetsize-256.png> |
-| Everything | `voidtools-everything.png` | Wikimedia Commons: <https://upload.wikimedia.org/wikipedia/commons/5/52/Everything_%28software%29_logo.png> |
+| Everything | `voidtools-everything.png` | official installer icon (Everything-1.4.1.1032.x64.msi, SHA-256 verified): <https://www.voidtools.com/Everything-1.4.1.1032.x64.msi> |
 | ShareX | `sharex-sharex.png` | official asset: <https://raw.githubusercontent.com/ShareX/ShareX/develop/ShareX.HelpersLib/Resources/ShareX_Logo.png> |
 | Notepad++ | `notepad-notepad-.png` | apple-touch-icon: <https://notepad-plus-plus.org/apple-touch-icon.png> |
 | WinDirStat | `windirstat-windirstat.png` | official asset: <https://raw.githubusercontent.com/windirstat/windirstat/master/windirstat/logos/logo_color.svg> |
@@ -52,5 +52,4 @@ visible in dark mode. Nothing else was changed.
 | Git | `git-git.png` | official asset: <https://git-scm.com/images/logos/downloads/Git-Icon-1788C.svg> |
 | Python 3.14 | `python-python-3-14.png` | apple-touch-icon: <https://www.python.org/static/apple-touch-icon-144x144-precomposed.png> |
 | Node.js LTS | `openjs-nodejs-lts.png` | official asset: <https://nodejs.org/static/logos/jsIconGreen.svg> |
-
-No logo (a letter tile is shown instead): Intel Driver & Support Assistant.
+| Intel Driver & Support Assistant | `intel-inteldriverandsupportassistant.png` | Wikimedia Commons (Intel logo): <https://upload.wikimedia.org/wikipedia/commons/8/85/Intel_logo_2023.svg> |
