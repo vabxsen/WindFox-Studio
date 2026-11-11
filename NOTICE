@@ -1,0 +1,26 @@
+WindFox Studio
+==============
+
+Design reference
+----------------
+The layout, spacing, sizes and control patterns of this app's UI follow the
+WinUI 3 Gallery (https://github.com/microsoft/WinUI-Gallery), and the color
+tokens come from microsoft-ui-xaml
+(controls/dev/CommonStyles/Common_themeresources_any.xaml). No code, images
+or logos from those projects are included; the measurements and token values
+were re-implemented in CSS.
+
+  WinUI-Gallery     Copyright (c) Microsoft Corporation. MIT License.
+  microsoft-ui-xaml Copyright (c) Microsoft Corporation. MIT License.
+
+Third-party software
+--------------------
+  Tauri                  MIT / Apache-2.0
+  Fluent UI React v9     MIT
+  React                  MIT
+  windows-rs             MIT / Apache-2.0
+  wmi-rs                 MIT / Apache-2.0
+
+Apps offered in the catalog are installed from their publishers' official
+packages through Windows Package Manager (winget) or the Microsoft Store, and
+are covered by their own licenses. Drivers come from Windows Update.

@@ -1,0 +1,30 @@
+{
+  "name": "windfox-studio",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "tauri": "tauri",
+    "check-catalog": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-catalog.ps1"
+  },
+  "dependencies": {
+    "@fluentui/react-components": "^9.75.2",
+    "@tauri-apps/api": "^2.12.4",
+    "@tauri-apps/plugin-log": "^2.10.2",
+    "@tauri-apps/plugin-opener": "^2.7.3",
+    "@tauri-apps/plugin-store": "^2.5.1",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.12.4",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.3.0",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.8"
+  }
+}

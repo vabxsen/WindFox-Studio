@@ -1,0 +1,119 @@
+{
+  "version": 1,
+  "categories": [
+    {
+      "id": "gaming",
+      "name": "Gaming",
+      "description": "Game stores, launchers and voice chat.",
+      "glyph": "",
+      "apps": [
+        { "id": "Valve.Steam", "source": "winget", "name": "Steam", "description": "The biggest PC game store and launcher.", "recommended": true, "elevated": true },
+        { "id": "EpicGames.EpicGamesLauncher", "source": "winget", "name": "Epic Games Launcher", "description": "Epic's store, with free games every week.", "recommended": true, "elevated": true },
+        { "id": "GOG.Galaxy", "source": "winget", "name": "GOG GALAXY", "description": "DRM-free games and one library for all your stores.", "recommended": false, "elevated": true },
+        { "id": "ElectronicArts.EADesktop", "source": "winget", "name": "EA app", "description": "Play EA games like EA SPORTS FC and Battlefield.", "recommended": false, "elevated": true },
+        { "id": "Ubisoft.Connect", "source": "winget", "name": "Ubisoft Connect", "description": "Launcher for Ubisoft games.", "recommended": false, "elevated": true },
+        { "id": "Blizzard.BattleNet", "source": "winget", "name": "Battle.net", "description": "Blizzard and Activision games, including Call of Duty.", "recommended": false, "elevated": true },
+        { "id": "Discord.Discord", "source": "winget", "name": "Discord", "description": "Voice, video and text chat for gamers and communities.", "recommended": true, "elevated": false }
+      ]
+    },
+    {
+      "id": "entertainment",
+      "name": "Entertainment",
+      "description": "Music, video and streaming.",
+      "glyph": "",
+      "apps": [
+        { "id": "Spotify.Spotify", "source": "winget", "name": "Spotify", "description": "Stream music and podcasts.", "recommended": true, "elevated": false },
+        { "id": "VideoLAN.VLC", "source": "winget", "name": "VLC media player", "description": "Plays almost any video or audio file.", "recommended": true, "elevated": true },
+        { "id": "OBSProject.OBSStudio", "source": "winget", "name": "OBS Studio", "description": "Record your screen and stream live.", "recommended": false, "elevated": true },
+        { "id": "9WZDNCRFJ3TJ", "source": "msstore", "name": "Netflix", "description": "Watch Netflix shows and movies.", "recommended": false, "elevated": false }
+      ]
+    },
+    {
+      "id": "ai",
+      "name": "Artificial Intelligence",
+      "description": "AI assistants and tools to run models on your own PC.",
+      "glyph": "",
+      "apps": [
+        { "id": "Anthropic.Claude", "source": "winget", "name": "Claude", "description": "Anthropic's AI assistant for writing, coding and research.", "recommended": true, "elevated": false },
+        { "id": "9NT1R1C2HH7J", "source": "msstore", "name": "ChatGPT", "description": "OpenAI's AI assistant.", "recommended": true, "elevated": false },
+        { "id": "Ollama.Ollama", "source": "winget", "name": "Ollama", "description": "Run open AI models locally from the command line.", "recommended": false, "elevated": false },
+        { "id": "ElementLabs.LMStudio", "source": "winget", "name": "LM Studio", "description": "Download and chat with local AI models.", "recommended": false, "elevated": false }
+      ]
+    },
+    {
+      "id": "work",
+      "name": "Work",
+      "description": "Meetings, chat, notes and documents.",
+      "glyph": "",
+      "apps": [
+        { "id": "Microsoft.Teams", "source": "winget", "name": "Microsoft Teams", "description": "Chat, meetings and calls for work and school.", "recommended": true, "elevated": true },
+        { "id": "Zoom.Zoom", "source": "winget", "name": "Zoom Workplace", "description": "Video meetings and webinars.", "recommended": true, "elevated": true },
+        { "id": "SlackTechnologies.Slack", "source": "winget", "name": "Slack", "description": "Team messaging and channels.", "recommended": false, "elevated": false },
+        { "id": "Notion.Notion", "source": "winget", "name": "Notion", "description": "Notes, docs and project planning in one place.", "recommended": false, "elevated": false },
+        { "id": "Obsidian.Obsidian", "source": "winget", "name": "Obsidian", "description": "Private notes kept as Markdown files.", "recommended": false, "elevated": false },
+        { "id": "TheDocumentFoundation.LibreOffice", "source": "winget", "name": "LibreOffice", "description": "Free office suite: documents, spreadsheets and slides.", "recommended": false, "elevated": true }
+      ]
+    },
+    {
+      "id": "utilities",
+      "name": "Utilities",
+      "description": "Small tools that make Windows nicer to use.",
+      "glyph": "",
+      "apps": [
+        { "id": "7zip.7zip", "source": "winget", "name": "7-Zip", "description": "Open and create zip, 7z and rar archives.", "recommended": true, "elevated": true },
+        { "id": "Microsoft.PowerToys", "source": "winget", "name": "PowerToys", "description": "Power-user tools like FancyZones and Color Picker.", "recommended": true, "elevated": true },
+        { "id": "voidtools.Everything", "source": "winget", "name": "Everything", "description": "Find any file by name instantly.", "recommended": false, "elevated": true },
+        { "id": "ShareX.ShareX", "source": "winget", "name": "ShareX", "description": "Screenshots, screen recordings and quick uploads.", "recommended": false, "elevated": true },
+        { "id": "Notepad++.Notepad++", "source": "winget", "name": "Notepad++", "description": "A fast text and code editor.", "recommended": true, "elevated": true },
+        { "id": "WinDirStat.WinDirStat", "source": "winget", "name": "WinDirStat", "description": "See what is filling up your disk.", "recommended": false, "elevated": true }
+      ]
+    },
+    {
+      "id": "browsers",
+      "name": "Browsers",
+      "description": "Web browsers besides Microsoft Edge.",
+      "glyph": "",
+      "apps": [
+        { "id": "Google.Chrome", "source": "winget", "name": "Google Chrome", "description": "Google's web browser.", "recommended": true, "elevated": true },
+        { "id": "Mozilla.Firefox", "source": "winget", "name": "Mozilla Firefox", "description": "Independent, privacy-focused browser.", "recommended": false, "elevated": true },
+        { "id": "Brave.Brave", "source": "winget", "name": "Brave", "description": "Browser with a built-in ad and tracker blocker.", "recommended": false, "elevated": true }
+      ]
+    },
+    {
+      "id": "creative",
+      "name": "Creative",
+      "description": "Photo, 3D, audio and video editing.",
+      "glyph": "",
+      "apps": [
+        { "id": "GIMP.GIMP.3", "source": "winget", "name": "GIMP", "description": "Free photo editor and image tool.", "recommended": false, "elevated": true },
+        { "id": "BlenderFoundation.Blender", "source": "winget", "name": "Blender", "description": "3D modelling, animation and rendering.", "recommended": false, "elevated": true },
+        { "id": "KDE.Krita", "source": "winget", "name": "Krita", "description": "Digital painting and illustration.", "recommended": false, "elevated": true },
+        { "id": "dotPDN.PaintDotNet", "source": "winget", "name": "Paint.NET", "description": "Simple, fast image editor.", "recommended": true, "elevated": true },
+        { "id": "Audacity.Audacity", "source": "winget", "name": "Audacity", "description": "Record and edit audio.", "recommended": false, "elevated": true },
+        { "id": "HandBrake.HandBrake", "source": "winget", "name": "HandBrake", "description": "Convert videos to other formats.", "recommended": false, "elevated": true }
+      ]
+    },
+    {
+      "id": "developer",
+      "name": "Developer",
+      "description": "Editors, languages and tools for coding.",
+      "glyph": "",
+      "apps": [
+        { "id": "Microsoft.VisualStudioCode", "source": "winget", "name": "Visual Studio Code", "description": "Lightweight code editor with extensions.", "recommended": true, "elevated": false },
+        { "id": "Git.Git", "source": "winget", "name": "Git", "description": "Version control for your code.", "recommended": true, "elevated": true },
+        { "id": "Python.Python.3.14", "source": "winget", "name": "Python 3.14", "description": "The Python programming language.", "recommended": false, "elevated": false },
+        { "id": "OpenJS.NodeJS.LTS", "source": "winget", "name": "Node.js LTS", "description": "JavaScript runtime, long-term support release.", "recommended": false, "elevated": true }
+      ]
+    },
+    {
+      "id": "gpu-tools",
+      "name": "Graphics driver tools",
+      "description": "Vendor apps that keep graphics drivers up to date. Offered on the Drivers page.",
+      "glyph": "",
+      "hidden": true,
+      "apps": [
+        { "id": "Intel.IntelDriverAndSupportAssistant", "source": "winget", "name": "Intel Driver & Support Assistant", "description": "Keeps Intel graphics and other Intel drivers current.", "recommended": false, "elevated": true }
+      ]
+    }
+  ]
+}

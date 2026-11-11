@@ -1,0 +1,33 @@
+[package]
+name = "windfox-studio"
+version = "0.1.0"
+description = "Set up a Windows 11 PC: pick apps, install them in one go, and keep drivers current."
+edition = "2021"
+publish = false
+
+[lib]
+name = "windfox_studio_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+anyhow = "1.0.104"
+log = "0.4.35"
+serde = { version = "1.0.229", features = ["derive"] }
+serde_json = "1.0.154"
+tauri = { version = "2", features = [] }
+tauri-plugin-log = "2"
+tauri-plugin-opener = "2"
+tauri-plugin-store = "2"
+tokio = { version = "1.54.1", features = ["rt", "macros", "sync", "time", "io-util", "net", "process"] }
+windows = { version = "0.62.2", features = ["Win32_Foundation", "Win32_Security", "Win32_System_Threading", "Win32_System_Com", "Win32_System_Ole", "Win32_System_Variant", "Win32_System_UpdateAgent", "Win32_System_Restore", "Win32_System_Pipes", "Win32_UI_Shell", "Win32_UI_WindowsAndMessaging", "Win32_UI_Input_KeyboardAndMouse", "Win32_System_Registry", "UI", "UI_ViewManagement", "Foundation"] }
+wmi = "0.18.4"
+
+[profile.release]
+codegen-units = 1
+lto = true
+opt-level = "s"
+panic = "abort"
+strip = true
