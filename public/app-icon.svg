@@ -1,20 +1,61 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <title>WindFox Studio</title>
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#3B9BFF"/>
-      <stop offset="1" stop-color="#0A4FB4"/>
+    <linearGradient id="earL" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F76707"/>
+      <stop offset="1" stop-color="#C2410C"/>
     </linearGradient>
-    <linearGradient id="shine" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.30"/>
-      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    <linearGradient id="earR" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FF922B"/>
+      <stop offset="1" stop-color="#E8590C"/>
     </linearGradient>
-    <clipPath id="tile">
-      <rect x="64" y="64" width="896" height="896" rx="200"/>
-    </clipPath>
+    <linearGradient id="innerEar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFE8CC"/>
+      <stop offset="1" stop-color="#FFC078"/>
+    </linearGradient>
+    <linearGradient id="faceL" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F76707"/>
+      <stop offset="1" stop-color="#D9480F"/>
+    </linearGradient>
+    <linearGradient id="faceR" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFA94D"/>
+      <stop offset="1" stop-color="#F76707"/>
+    </linearGradient>
+    <linearGradient id="brow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFC078"/>
+      <stop offset="1" stop-color="#FF922B"/>
+    </linearGradient>
+    <linearGradient id="cheekL" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFF4E6"/>
+      <stop offset="1" stop-color="#FFE3C2"/>
+    </linearGradient>
+    <linearGradient id="cheekR" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#FFF0DC"/>
+    </linearGradient>
   </defs>
-  <rect x="64" y="64" width="896" height="896" rx="200" fill="url(#bg)"/>
-  <rect x="64" y="64" width="896" height="420" fill="url(#shine)" clip-path="url(#tile)"/>
-  <path d="M276 600v84a68 68 0 0 0 68 68h336a68 68 0 0 0 68-68v-84" fill="none" stroke="#FFFFFF" stroke-width="72" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M512 252v352" fill="none" stroke="#FFFFFF" stroke-width="72" stroke-linecap="round"/>
-  <path d="M384 480l128 128 128-128" fill="none" stroke="#FFFFFF" stroke-width="72" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Solid base under the facets so no seams show when scaled down -->
+  <path d="M140 110 L421 335 L512 300 L603 335 L884 110 L904 470 L512 935 L120 470 Z" fill="#E8590C"/>
+
+  <!-- Ears -->
+  <polygon points="140,110 440,350 120,470" fill="url(#earL)"/>
+  <polygon points="884,110 584,350 904,470" fill="url(#earR)"/>
+  <polygon points="175,175 372,338 160,415" fill="url(#innerEar)"/>
+  <polygon points="849,175 652,338 864,415" fill="url(#innerEar)"/>
+
+  <!-- Face: two folded halves and a lighter brow facet -->
+  <polygon points="120,450 512,300 512,935" fill="url(#faceL)"/>
+  <polygon points="904,450 512,300 512,935" fill="url(#faceR)"/>
+  <polygon points="512,300 446,420 512,560 578,420" fill="url(#brow)"/>
+
+  <!-- Cheeks -->
+  <polygon points="120,450 370,640 512,935" fill="url(#cheekL)"/>
+  <polygon points="904,450 654,640 512,935" fill="url(#cheekR)"/>
+
+  <!-- Eyes and nose -->
+  <polygon points="300,500 420,540 330,572" fill="#1F1A17"/>
+  <polygon points="724,500 604,540 694,572" fill="#1F1A17"/>
+  <polygon points="448,845 576,845 512,935" fill="#1F1A17"/>
+  <polygon points="474,853 516,853 498,872" fill="#FFFFFF" opacity="0.35"/>
 </svg>
