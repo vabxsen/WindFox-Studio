@@ -1,31 +1,18 @@
 import { Button, Spinner } from "@fluentui/react-components";
 import { useState } from "react";
-import { categories, findCategory, glyphs, recommendedApps } from "../catalog";
+import { categories, glyphs, recommendedApps } from "../catalog";
 import { AppGrid } from "../components/AppCard";
 import { EmptyState } from "../components/basics";
 import { HeroHeader } from "../components/HeroHeader";
+import { QuickActions } from "../components/QuickActions";
 import { SelectorBar } from "../components/SelectorBar";
-import { HorizontalScroller, Tile } from "../components/Tile";
 import { useApp } from "../state";
 
 type Tab = "recommended" | "installed";
 
 export function HomePage() {
-  const { navigate, settings, installed, installedError, refreshInstalled } = useApp();
+  const { settings, installed, installedError, refreshInstalled } = useApp();
   const [tab, setTab] = useState<Tab>("recommended");
-
-  const categoryTile = (id: string, description: string) => {
-    const c = findCategory(id)!;
-    return (
-      <Tile
-        key={id}
-        glyph={c.glyph}
-        title={c.name === "Artificial Intelligence" ? "AI tools" : c.name}
-        description={description}
-        onClick={() => navigate({ name: "apps", category: id })}
-      />
-    );
-  };
 
   const installedApps = categories
     .flatMap((c) => c.apps)
@@ -41,26 +28,7 @@ export function HomePage() {
           </div>
           <h1 className="type-title-large">WindFox Studio</h1>
         </div>
-        <div className="hero-tiles">
-          <HorizontalScroller>
-            <Tile
-              glyph={glyphs.sparkle}
-              title="Set up this PC"
-              description="Tell us what you use your PC for and get app suggestions."
-              onClick={() => navigate({ name: "welcome" })}
-            />
-            <Tile
-              glyph={glyphs.drivers}
-              title="Check drivers"
-              description="Find missing and newer drivers from Windows Update."
-              onClick={() => navigate({ name: "drivers" })}
-            />
-            {categoryTile("gaming", "Steam, Epic Games, Discord and more.")}
-            {categoryTile("work", "Teams, Zoom, Slack, Notion and more.")}
-            {categoryTile("ai", "Claude, ChatGPT, Ollama and LM Studio.")}
-            {categoryTile("utilities", "7-Zip, PowerToys, Everything and more.")}
-          </HorizontalScroller>
-        </div>
+        <QuickActions />
       </HeroHeader>
 
       <SelectorBar<Tab>

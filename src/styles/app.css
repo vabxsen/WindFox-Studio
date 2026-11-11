@@ -38,7 +38,7 @@ img { -webkit-user-drag: none; }
 ::-webkit-scrollbar-thumb:hover { border-width: 3px; }
 
 :where(.tile, .app-card, .nav-item, .titlebar-button, .caption-button, .selector-item,
-  .settings-card.clickable, .expander-toggle, .hscroll-button):focus-visible {
+  .settings-card.clickable, .expander-toggle):focus-visible {
   outline: 2px solid var(--text-primary);
   outline-offset: 1px;
 }
@@ -279,37 +279,97 @@ img { -webkit-user-drag: none; }
   font-size: 10px;
   line-height: 14px;
 }
-.hero-tiles { position: relative; margin-top: 56px; }
-
-.hscroll { position: relative; }
-.hscroll-track {
-  display: flex;
-  gap: 12px;
-  overflow-x: auto;
-  padding: 0 var(--page-padding) 4px;
-  scroll-padding: 0 var(--page-padding);
-  scrollbar-width: none;
+/* Quick actions: after the cards on Windows 11 Settings > Home. */
+.quick-actions-wrap {
+  position: relative;
+  margin-top: 40px;
+  padding: 0 var(--page-padding);
+  container-type: inline-size;
 }
-.hscroll-track::-webkit-scrollbar { display: none; }
-.hscroll-button {
-  position: absolute;
-  top: 50%;
-  width: 24px;
-  height: 40px;
-  margin-top: -22px;
-  border-radius: var(--radius-control);
+.quick-actions {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 12px;
+}
+
+.action-card,
+.browse-card {
+  border-radius: var(--radius-overlay);
   border: 1px solid var(--surface-stroke-flyout);
   background: var(--acrylic-fill);
-  backdrop-filter: blur(30px);
-  box-shadow: var(--flyout-shadow);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--text-secondary);
+  backdrop-filter: blur(30px) saturate(125%);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
-.hscroll-button:hover { color: var(--text-primary); }
-.hscroll-button.start { left: 8px; }
-.hscroll-button.end { right: 8px; }
+
+.action-card {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr);
+  column-gap: 16px;
+  min-height: 172px;
+  padding: 20px;
+}
+.action-card-glyph { color: var(--accent-text); margin-top: 0; }
+.action-card-body { display: flex; flex-direction: column; min-width: 0; }
+.action-card-text { margin-top: 4px; color: var(--text-secondary); }
+.action-card-action { margin-top: auto; padding-top: 16px; }
+
+.status-line { display: inline-flex; align-items: flex-start; gap: 8px; }
+.status-line .status-glyph { margin-top: 2px; flex: none; }
+.status-glyph.tone-neutral { color: var(--text-secondary); }
+.status-glyph.tone-success { color: var(--success); }
+.status-glyph.tone-caution { color: var(--caution); }
+.status-glyph.tone-critical { color: var(--critical); }
+
+.browse-card { padding: 12px 12px 8px; }
+.browse-card-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 2px 8px 6px;
+}
+.pack-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2px 4px;
+}
+.pack-row {
+  display: grid;
+  grid-template-columns: 16px minmax(0, 1fr) auto 12px;
+  align-items: center;
+  column-gap: 12px;
+  width: 100%;
+  height: 32px;
+  padding: 0 8px;
+  border: none;
+  border-radius: var(--radius-control);
+  background: transparent;
+  color: var(--text-primary);
+  text-align: left;
+  transition: background 83ms linear;
+}
+.pack-row:hover { background: var(--subtle-fill-secondary); }
+.pack-row:active { background: var(--subtle-fill-tertiary); }
+.pack-row:active .pack-row-name { color: var(--text-secondary); }
+.pack-row:focus-visible { outline: 2px solid var(--text-primary); outline-offset: -2px; }
+.pack-row-glyph { color: var(--accent-text); }
+.pack-row-name { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+/* Secondary, not tertiary: tertiary measures 3.2:1 over light acrylic (WCAG 1.4.3 needs 4.5:1). */
+.pack-row-count { color: var(--text-secondary); }
+.pack-row-chevron { color: var(--text-secondary); }
+
+/* Responsive layout. Keep these after the base rules above so they win. */
+@container (min-width: 600px) {
+  .quick-actions { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .browse-card { grid-column: 1 / -1; }
+  .pack-list { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+@container (min-width: 1040px) {
+  .quick-actions { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1.35fr); }
+  .browse-card { grid-column: auto; }
+  .pack-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
 
 .tile {
   position: relative;
