@@ -48,11 +48,13 @@ The UI runs as a normal user. The first time something needs admin rights, it st
 
 ## Adding an app
 
-Add an entry to `src-tauri/catalog.json`, then run `npm run check-catalog`. Set `"elevated": false` for installers that refuse to run as administrator (they then run in the normal UI process).
+Add an entry to `src-tauri/catalog.json`, then run `npm run check-catalog`. For its logo, add a 128 × 128 PNG named after the winget ID (lower-case, other characters replaced by `-`, e.g. `valve-steam.png`) to `src/assets/logos/` and list its source in `SOURCES.md`; without one, a letter tile is shown. Set `"elevated": false` for installers that refuse to run as administrator (they then run in the normal UI process).
 
 ## License
 
 WindFox Studio is free software under the [GNU General Public License v3.0](LICENSE). You can use, study, change and share it. If you distribute a modified version, it must also be released under the GPL with its source code.
+
+The logos of the apps in the catalog (`src/assets/logos/`) belong to their owners and are not covered by the license either; see [their sources](src/assets/logos/SOURCES.md).
 
 The name "WindFox Studio" and its logo are not covered by the license. Forks are welcome, but please give them a different name and icon so people don't confuse them with this project.
 

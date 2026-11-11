@@ -460,6 +460,14 @@ img { -webkit-user-drag: none; }
   .app-card-description { -webkit-line-clamp: 3; }
 }
 
+.app-logo {
+  display: block;
+  flex: none;
+  object-fit: contain;
+  /* The logo files carry their own padding; scale a touch so they match letter tiles. */
+  transform: scale(1.14);
+}
+
 .app-icon {
   display: inline-flex;
   flex: none;

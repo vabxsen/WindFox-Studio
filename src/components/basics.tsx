@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { logoFor } from "../logos";
 
 export function Glyph({ g, size = 16, className = "" }: { g: string; size?: number; className?: string }) {
   return (
@@ -19,8 +20,12 @@ function hash(text: string) {
   return Math.abs(h);
 }
 
-/** Letter tile used until real app logos are added. */
+/** The app's official logo, or a colored letter tile when there is none. */
 export function AppIcon({ name, id, size = 32 }: { name: string; id: string; size?: number }) {
+  const logo = logoFor(id);
+  if (logo) {
+    return <img className="app-logo" src={logo} width={size} height={size} alt="" draggable={false} />;
+  }
   const letter = name.replace(/[^A-Za-z0-9]/g, "").charAt(0).toUpperCase() || "?";
   return (
     <span

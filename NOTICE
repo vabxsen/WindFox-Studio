@@ -24,3 +24,10 @@ Third-party software
 Apps offered in the catalog are installed from their publishers' official
 packages through Windows Package Manager (winget) or the Microsoft Store, and
 are covered by their own licenses. Drivers come from Windows Update.
+
+App logos
+---------
+The logos in src/assets/logos/ are trademarks of their respective owners. They
+are used only to identify the apps WindFox Studio can install, are NOT covered
+by WindFox Studio's GPL-3.0 license, and do not imply endorsement. Where each
+one came from is listed in src/assets/logos/SOURCES.md.
